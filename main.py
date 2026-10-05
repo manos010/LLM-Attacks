@@ -140,48 +140,7 @@ if st.session_state.current_module == "menu":
         st.button("Prompt Injection Defense 3", type="primary", use_container_width=True, key="menu_def_3")
         st.button("Prompt Leak 4", type="primary", use_container_width=True, key="menu_leak_4")
 
-    st.write("")
-    st.markdown("<div class='category-title'>CTF</div>", unsafe_allow_html=True)
-    with st.container(border=True):
-        if st.button("University ChatBot CTF", type="primary", use_container_width=True, key="menu_ctf"):
-            st.session_state.current_level = 1
-            st.session_state.current_module = "LLM01"
-            st.session_state.messages = []
-            st.rerun()
 
-    st.write("")
-    st.write("")
-    st.markdown("<div class='lab-overview-title' style='margin-top: 20px;'>LLM Output Attacks</div>", unsafe_allow_html=True)
-
-    st.markdown("<div class='category-title'>Cross-Site Scripting (XSS)</div>", unsafe_allow_html=True)
-    with st.container(border=True):
-        st.button("Cross-Site Scripting (XSS) 1", type="primary", use_container_width=True, key="menu_xss_1")
-        st.button("Cross-Site Scripting (XSS) 2", type="primary", use_container_width=True, key="menu_xss_2")
-
-    st.markdown("<div class='category-title'>SQL Injection</div>", unsafe_allow_html=True)
-    with st.container(border=True):
-        st.button("SQL Injection 1", type="primary", use_container_width=True, key="menu_sqli_1")
-        st.button("SQL Injection 2", type="primary", use_container_width=True, key="menu_sqli_2")
-        st.button("SQL Injection 3", type="primary", use_container_width=True, key="menu_sqli_3")
-
-    st.markdown("<div class='category-title'>Code Injection</div>", unsafe_allow_html=True)
-    with st.container(border=True):
-        st.button("Code Injection 1", type="primary", use_container_width=True, key="menu_ci_1")
-        st.button("Code Injection 2", type="primary", use_container_width=True, key="menu_ci_2")
-
-    st.markdown("<div class='category-title'>Function Calling</div>", unsafe_allow_html=True)
-    with st.container(border=True):
-        st.button("Function Calling 1", type="primary", use_container_width=True, key="menu_fc_1")
-        st.button("Function Calling 2", type="primary", use_container_width=True, key="menu_fc_2")
-        st.button("Function Calling 3", type="primary", use_container_width=True, key="menu_fc_3")
-
-    st.markdown("<div class='category-title'>Exfiltration Attacks</div>", unsafe_allow_html=True)
-    with st.container(border=True):
-        st.button("Chat Bot Playground", type="primary", use_container_width=True, key="menu_exf_play")
-        st.button("Exfiltration 1", type="primary", use_container_width=True, key="menu_exf_1")
-        st.button("Exfiltration 2", type="primary", use_container_width=True, key="menu_exf_2")
-        st.button("Exfiltration 3", type="primary", use_container_width=True, key="menu_exf_3")
-        st.button("Exfiltration 4", type="primary", use_container_width=True, key="menu_exf_4")
 
 elif st.session_state.current_module == "LLM01":
     university_ctf.run(client)
